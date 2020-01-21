@@ -2,7 +2,6 @@ dist: trusty
 sudo: false
 language: cpp
 
-
 # By default, travis uses an old version of GCC without
 # C++14 support. Switching to GCC 6 will remedy this.
 addons:
@@ -13,7 +12,20 @@ addons:
     packages:
       - g++-6
 
+before_install:
+  # Install helper script that uploads coverage report to 
+  # coveralls.io
+  pip install --user cpp-coveralls 
+
 # Build tests.
 script:
-  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
+  # Notice -DCOVERAGE is passed to CMake - as locally, we 
+  # might not want to enable coverage.
+  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake -DCOVERAGE=1 .
   - cmake --build . 
+  # Run unit tests to include them in the coverage report.
+  - ./tests 
+
+after_success:
+  # Exclude Google Test from coverage with -E .*gtest.*".
+  - coveralls --root . -E ".*gtest.*" -E ".*CMakeFiles.*" 
