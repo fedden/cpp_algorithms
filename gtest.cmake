@@ -1,4 +1,4 @@
-set(GOOGLETEST_ROOT gtest/googletest CACHE STRING "Google Test source root")
+set(GOOGLETEST_ROOT lib/gtest/googletest CACHE STRING "Google Test source root")
 
 # Note the SYSTEM keyword here. Without this, we would get spammed by all
 # of the warnings inside of the Google Test framework. 
