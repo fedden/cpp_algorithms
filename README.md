@@ -7,8 +7,9 @@ A repository of algorithms and datastructures for my personal education.
 To do:
 
 ### Graphs:
-- [ ] Depth First Search.
-- [ ] Breadth First Search.
+- [ ] Depth First Search (DFS).
+- [ ] Breadth First Search (BFS).
+- [ ] Parallel BFS.
 - [ ] Count all possible paths between two vertices.
 - [ ] Count number of trees in forest.
 - [ ] Transpose graph.
@@ -19,6 +20,7 @@ To do:
 - [ ] Graph colouring.
 - [ ] Travelling sales problem.
 - [ ] Clustering coefficient.
+- [ ] Page Rank.
 
 ### Tensors
 - [ ] Dot product.
