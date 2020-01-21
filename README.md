@@ -39,3 +39,7 @@ To do:
 
 ### Trees
 - [ ] K-D tree.
+
+### CUDA / GPU programming
+- [ ] Particle system.
+- [ ] Matrix operations.
