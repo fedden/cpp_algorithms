@@ -1,3 +1,11 @@
+| code-thing      | status        |
+| --------------- | ------------- |
+| master          | [![Build Status](https://travis-ci.org/fedden/cpp_algorithms.svg?branch=master)](https://travis-ci.org/fedden/cpp_algorithms) |
+| develop         | [![Build Status](https://travis-ci.org/fedden/cpp_algorithms.svg?branch=develop)](https://travis-ci.org/fedden/cpp_algorithms) |
+| coverage        | coming soon |
+| license         | [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) |
+
+
 # C++ Algorithms and Data Structures
 
 A repository of algorithms and datastructures for my personal education.
