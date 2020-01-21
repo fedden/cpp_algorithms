@@ -1,3 +1,11 @@
+| code-thing      | status        |
+| --------------- | ------------- |
+| master          | [![Build Status](https://travis-ci.org/fedden/cpp_algorithms.svg?branch=master)](https://travis-ci.org/fedden/cpp_algorithms) |
+| develop         | [![Build Status](https://travis-ci.org/fedden/cpp_algorithms.svg?branch=develop)](https://travis-ci.org/fedden/cpp_algorithms) |
+| coverage        | [![Coverage Status](https://coveralls.io/repos/github/fedden/cpp_algorithms/badge.svg?branch=master)](https://coveralls.io/github/fedden/cpp_algorithms?branch=master) |
+| license         | [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) |
+
+
 # C++ Algorithms and Data Structures
 
 A repository of algorithms and datastructures for my personal education.
@@ -7,8 +15,9 @@ A repository of algorithms and datastructures for my personal education.
 To do:
 
 ### Graphs:
-- [ ] Depth First Search.
-- [ ] Breadth First Search.
+- [ ] Depth First Search (DFS).
+- [ ] Breadth First Search (BFS).
+- [ ] Parallel BFS.
 - [ ] Count all possible paths between two vertices.
 - [ ] Count number of trees in forest.
 - [ ] Transpose graph.
@@ -19,6 +28,7 @@ To do:
 - [ ] Graph colouring.
 - [ ] Travelling sales problem.
 - [ ] Clustering coefficient.
+- [ ] Page Rank.
 
 ### Tensors
 - [ ] Dot product.
@@ -37,3 +47,7 @@ To do:
 
 ### Trees
 - [ ] K-D tree.
+
+### CUDA / GPU programming
+- [ ] Particle system.
+- [ ] Matrix operations.
