@@ -2,7 +2,7 @@
 | --------------- | ------------- |
 | master          | [![Build Status](https://travis-ci.org/fedden/cpp_algorithms.svg?branch=master)](https://travis-ci.org/fedden/cpp_algorithms) |
 | develop         | [![Build Status](https://travis-ci.org/fedden/cpp_algorithms.svg?branch=develop)](https://travis-ci.org/fedden/cpp_algorithms) |
-| coverage        | coming soon |
+| coverage        | [![Coverage Status](https://coveralls.io/repos/github/fedden/cpp_algorithms/badge.svg?branch=master)](https://coveralls.io/github/fedden/cpp_algorithms?branch=master) |
 | license         | [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) |
 
 
