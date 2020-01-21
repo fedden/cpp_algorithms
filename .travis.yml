@@ -1,0 +1,19 @@
+dist: trusty
+sudo: false
+language: cpp
+
+
+# By default, travis uses an old version of GCC without
+# C++14 support. Switching to GCC 6 will remedy this.
+addons:
+  apt:
+    sources:
+      # The toolchain needed for C++ development.
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-6
+
+# Build tests.
+script:
+  - CXX=/user/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
+  - cmake --build . 
