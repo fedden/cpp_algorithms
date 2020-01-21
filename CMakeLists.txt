@@ -12,6 +12,7 @@ target_link_libraries(tests gtest ${CMAKE_THREAD_LIBS_INIT})
 
 target_compile_options(tests PRIVATE -std=c++14 -g -Wall -Werror -Wextra -Wpedantic -Wconversion -Wswitch-default -Wswitch-enum -Wunreachable-code -Wwrite-strings -Wcast-align -Wshadow -Wundef)
 
+# If COVERAGE env var set, enable the gcda files generation, needed by lcov in our toolchain.
 if (COVERAGE)
   target_compile_options(tests PRIVATE --coverage)
   target_link_libraries(tests PRIVATE --coverage)
