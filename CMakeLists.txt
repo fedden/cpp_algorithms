@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
+
+# Needed for OS X development.
 set(CMAKE_CXX_STANDARD 14)
 project(cpp_algorithms)
 include(gtest.cmake)
