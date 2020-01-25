@@ -1,41 +1,47 @@
-#include "vertex.h"
+#include <string>
+#include <map>
 #include <vector>
 
-/**
- * Abstract graph class.
- */
-class Graph {
+struct Node {
+  std::string id;
 
-public:
-  void add_vertices(std::vector<Vertex> vertices) = 0;
-  Graph(){};
-  ~Graph(){};
-}
+  // Needed so we can use the Node class directly in the std::map
+  bool operator<(const Node &node_other) {
+    return id < node_other.id;
+  }
+};
 
-/**
- * Graph class that makes use of an adjacency list to represent the vertices.
- */
-class AdjacencyListGraph : public Graph {
+struct Edge {
+  Node from;
+  Node to;
+  double weight = 1;
+};
 
-public:
-  AdjacencyListGraph();
+struct Neighbour {
+  Node node;
+  double weight = 1;
+};
 
-  void add_vertices(std::vector<Vertex> vertices);
-
-private:
-  std::vector<std::vector<int>> adjacency_list;
+enum GraphType {
+  Undirected,
+  Directed
 };
 
 /**
- * Graph class that makes use of an adjacency matrix to represent the vertices.
+ * Uses a pair of hash tables to get the best of both worlds with
+ * respect to adjacency matrices and adjacency lists; it can still
+ * handle the sparsity that adjacency lists support and also O(1)
+ * lookup times that adjacency matrices provide.
  */
-class AdjacencyMatrixGraph : public Graph {
-
+class Graph {
+  GraphType graph_type;
+  std::map<Node, std::map<Node, double>> adjacency_map;
 public:
-  AdjacencyMatrixGraph();
-
-  void add_vertices(std::vector<Vertex> vertices);
-
-private:
-  std::vector<std::vector<int>> adjacency_matrix;
+  void add_edge(const Edge &edge);
+  inline bool contains(const Node &node) const;
+  std::vector<Node> get_nodes() const;
+  std::vector<Edge> get_edges() const;
+  std::vector<Neighbour> get_neighbours(const Node& node) const;
+  Graph(GraphType graph_type) : graph_type(graph_type){};
+  ~Graph(){};
 };
